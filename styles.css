@@ -579,6 +579,41 @@ body {
   color: var(--text-secondary);
 }
 
+/* Dual Location Box in Natación Integral */
+.locations-dual-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+.loc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.loc-icon {
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.loc-icon.swim { color: var(--accent-cyan); }
+.loc-icon.gym { color: var(--accent-orange); }
+
+.loc-item strong {
+  font-size: 0.82rem;
+  color: #fff;
+}
+
+.loc-item p {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+}
+
 /* Price Cards Grid */
 .price-grid {
   display: grid;
