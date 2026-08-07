@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const msgInput = document.getElementById('custom-msg-input');
   const optionCards = document.querySelectorAll('.option-card');
 
-  // Default default selected plan per category
+  // Default selected plan per category
   let activeTab = 'natacion';
   let selectedPlan = '';
 
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     kallpa: (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
-      return `¡Hola! Quisiera información para unirme al Club de Nadadores Kallpa (Natación Jóvenes y Adultos).${planDetail} Por favor brindar detalles de clases y vacantes.`;
+      return `¡Hola! Quisiera más información sobre las Clases de Natación (Piscina Temperada Colegio Fanning).${planDetail} Por favor brindar detalles de horarios y vacantes disponibles.`;
     },
     contacto: () => {
-      return `¡Hola! Quisiera realizar una consulta general sobre los servicios de Natación y Gimnasio en la Sede Jesús María (Av. Talara 450).`;
+      return `¡Hola! Quisiera realizar una consulta general sobre las Clases de Natación y Gimnasio Búnker Cross en Jesús María.`;
     }
   };
 
