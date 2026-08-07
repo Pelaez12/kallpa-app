@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kallpa - Natación y Gimnasio | Jesús María</title>
+  <meta name="description" content="Academia de Natación, Club de Nadadores Kallpa y Gimnasio Búnker Cross en Jesús María. Promociones especiales y reserva directa por WhatsApp.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- App Wrapper -->
+  <div class="app-viewport">
+    
+    <!-- Top Header & Brand -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="brand-container">
+          <div class="brand-logo-wrapper">
+            <img src="assets/logo.png" alt="Kallpa Logo Circular" class="brand-logo">
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">KALLPA <span class="brand-accent">& BÚNKER CROSS</span></h1>
+            <p class="brand-subtitle"><i class="fa-solid fa-location-dot"></i> Av. Talara 450 • Col. Teresa González, Jesús María</p>
+          </div>
+        </div>
+        
+        <!-- Header Actions: Contacts & Social Media (Instagram & TikTok) -->
+        <div class="header-actions">
+          <div class="header-contacts">
+            <button class="contact-pill-btn" onclick="openWhatsApp('955882306')"><i class="fa-brands fa-whatsapp"></i> 955 882 306</button>
+            <button class="contact-pill-btn" onclick="openWhatsApp('992272521')"><i class="fa-brands fa-whatsapp"></i> 992 272 521</button>
+          </div>
+
+          <div class="header-socials">
+            <a href="https://www.instagram.com/kallpa_triatlon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="social-pill-btn instagram" title="Síguenos en Instagram">
+              <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@kallpa.triatlon.clases?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" class="social-pill-btn tiktok" title="Síguenos en TikTok">
+              <i class="fa-brands fa-tiktok"></i> TikTok
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+      
+      <!-- Section Title & Instructions -->
+      <div class="hero-section">
+        <h2 class="hero-headline">Elige tu Programa y Reserva Online</h2>
+        <p class="hero-subtext">Selecciona una categoría para ver afiches, horarios oficiales y reservar por WhatsApp</p>
+      </div>
+
+      <!-- Navigation Pill Menu (Simple Menu de Botones) -->
+      <nav class="nav-menu" role="tablist" aria-label="Programas y Promociones">
+        <button class="nav-btn active" data-tab="natacion" role="tab" aria-selected="true" aria-controls="panel-natacion">
+          <span class="btn-icon">🏊‍♂️</span>
+          <span class="btn-text">Natación Integral</span>
+          <span class="btn-badge">PROMO 3M</span>
+        </button>
+        <button class="nav-btn" data-tab="bunker" role="tab" aria-selected="false" aria-controls="panel-bunker">
+          <span class="btn-icon">🏋️‍♂️</span>
+          <span class="btn-text">Búnker Cross</span>
+          <span class="btn-badge">GIMNASIO</span>
+        </button>
+        <button class="nav-btn" data-tab="kallpa" role="tab" aria-selected="false" aria-controls="panel-kallpa">
+          <span class="btn-icon">🏆</span>
+          <span class="btn-text">Club Kallpa</span>
+          <span class="btn-badge">ESTRELLAS</span>
+        </button>
+        <button class="nav-btn" data-tab="contacto" role="tab" aria-selected="false" aria-controls="panel-contacto">
+          <span class="btn-icon">📍</span>
+          <span class="btn-text">Horarios y Sedes</span>
+          <span class="btn-badge">INFO</span>
+        </button>
+      </nav>
+
+      <!-- Standard Mobile Display Frame (Cuadro Estandar Estatico para Moviles) -->
+      <div class="mobile-frame-container">
+        <div class="mobile-frame">
+          <div class="frame-bar">
+            <span class="notch"></span>
+            <span class="camera-dot"></span>
+          </div>
+
+          <!-- Dynamic Display Area -->
+          <div class="frame-content">
+            
+            <!-- Panel 1: Natación Integral -->
+            <div class="tab-panel active" id="panel-natacion" data-category="Natación Integral (Promoción 3 Meses)">
+              <div class="promo-card">
+                <div class="image-viewer-wrapper">
+                  <img src="assets/promo_natacion_integral.jpg" alt="Promoción Especial Natación Integral" class="promo-image" id="img-natacion">
+                  <button class="zoom-trigger-btn" onclick="openLightbox('assets/promo_natacion_integral.jpg', 'Promoción Especial Natación Integral')">
+                    <i class="fa-solid fa-expand"></i> Ver afiche completo
+                  </button>
+                </div>
+                
+                <div class="promo-details">
+                  <div class="promo-header-tag">
+                    <span class="tag-glow"><i class="fa-solid fa-fire"></i> PROMOCIÓN 3 MESES</span>
+                    <span class="months-tag">Agosto • Setiembre • Octubre</span>
+                  </div>
+
+                  <h3 class="promo-title">¡Sumérgete en el Éxito! Tu Entrenamiento Integral</h3>
+                  <p class="promo-desc">Combina natación con funcional crossfit. Flexibilidad de horarios.</p>
+
+                  <div class="price-grid">
+                    <div class="price-card option-card" data-plan="Paquete 1: S/ 750 (8 clases natación/mes + 10 funcional)">
+                      <div class="price-badge">Opción 1</div>
+                      <div class="price-amount">S/ 750</div>
+                      <div class="price-period">3 Meses completados</div>
+                      <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>8 Clases</strong> de Natación x Mes</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>10 Entrenamientos</strong> Funcional Crossfit</li>
+                        <li><i class="fa-solid fa-check"></i> Flexibilidad total de horarios</li>
+                      </ul>
+                    </div>
+
+                    <div class="price-card option-card featured" data-plan="Paquete 2: S/ 870 (12 clases natación/mes + 15 funcional)">
+                      <div class="price-badge popular">Más Popular</div>
+                      <div class="price-amount">S/ 870</div>
+                      <div class="price-period">3 Meses completados</div>
+                      <ul class="price-features">
+                        <li><i class="fa-solid fa-check"></i> <strong>12 Clases</strong> de Natación x Mes</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>15 Entrenamientos</strong> Funcional Crossfit</li>
+                        <li><i class="fa-solid fa-check"></i> Flexibilidad total de horarios</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Schedule Box for Natación -->
+                  <div class="schedule-box natacion-theme">
+                    <h4><i class="fa-regular fa-clock"></i> Horarios Natación:</h4>
+                    <ul>
+                      <li><span>Lunes a Viernes:</span> <strong>9:00 PM a 10:00 PM</strong></li>
+                      <li><span>Sábados:</span> <strong>1:00 PM a 2:00 PM || 2:00 PM a 3:00 PM</strong></li>
+                      <li><span>Domingos:</span> <strong>9:00 AM</strong></li>
+                    </ul>
+                    <p class="location-note"><i class="fa-solid fa-water"></i> <strong>Lugar Natación:</strong> Piscina Temperada Colegio Teresa González de Fanning (Jesús María)</p>
+                  </div>
+
+                  <!-- Medios de Pago con Iconos Oficiales Proporcionados por el Usuario -->
+                  <div class="payment-methods-box">
+                    <div class="pay-methods-title">
+                      <i class="fa-regular fa-credit-card"></i> Medios de Pago Aceptados:
+                    </div>
+                    <div class="payment-badges-grid">
+                      <div class="pay-badge-item"><img src="assets/pay_visa.png" alt="Visa" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_mastercard.png" alt="Mastercard" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_yape.png" alt="Yape" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_plin.png" alt="Plin" class="pay-logo-img"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Búnker Cross -->
+            <div class="tab-panel" id="panel-bunker" data-category="Búnker Cross (Gimnasio y Funcional)">
+              <div class="promo-card">
+                <div class="image-viewer-wrapper">
+                  <img src="assets/promo_bunker_cross.png" alt="Búnker Cross - Gimnasio y Funcional" class="promo-image" id="img-bunker">
+                  <button class="zoom-trigger-btn" onclick="openLightbox('assets/promo_bunker_cross.png', 'Búnker Cross - Planes de Gimnasio')">
+                    <i class="fa-solid fa-expand"></i> Ver afiche completo
+                  </button>
+                </div>
+
+                <div class="promo-details">
+                  <div class="promo-header-tag bunker-theme">
+                    <span class="tag-glow orange"><i class="fa-solid fa-dumbbell"></i> GIMNASIO & FUNCIONAL</span>
+                    <span class="months-tag">Transforma Cuerpo y Mente</span>
+                  </div>
+
+                  <h3 class="promo-title">Búnker Cross - Planes de Entrenamiento</h3>
+                  <p class="promo-desc">Todos los planes incluyen 20 días de congelamiento y 2 sesiones de piscina por mes.</p>
+
+                  <div class="bunker-grid">
+                    <div class="bunker-card option-card" data-plan="Plan Mensual S/ 160">
+                      <div class="bunker-title">Plan Mensual</div>
+                      <div class="bunker-price">S/ 160</div>
+                      <div class="bunker-perks">20 Días Congelamiento • 2 Sesiones Piscina</div>
+                    </div>
+
+                    <div class="bunker-card option-card" data-plan="Plan Trimestral S/ 375">
+                      <div class="bunker-tag">SAVE</div>
+                      <div class="bunker-title">Plan Trimestral</div>
+                      <div class="bunker-price">S/ 375</div>
+                      <div class="bunker-perks">20 Días Congelamiento • 2 Sesiones Piscina</div>
+                    </div>
+
+                    <div class="bunker-card option-card" data-plan="Plan 6 Meses S/ 690">
+                      <div class="bunker-tag">SAVE MORE</div>
+                      <div class="bunker-title">Plan 6 Meses</div>
+                      <div class="bunker-price">S/ 690</div>
+                      <div class="bunker-perks">20 Días Congelamiento • 2 Sesiones Piscina</div>
+                    </div>
+
+                    <div class="bunker-card option-card featured-bunker" data-plan="Plan Anual S/ 1290">
+                      <div class="bunker-tag best">BEST VALOR</div>
+                      <div class="bunker-title">Plan Anual</div>
+                      <div class="bunker-price">S/ 1290</div>
+                      <div class="bunker-perks">20 Días Congelamiento • 2 Sesiones Piscina</div>
+                    </div>
+                  </div>
+
+                  <!-- Schedule Box for Gimnasio -->
+                  <div class="schedule-box gym-theme">
+                    <h4><i class="fa-solid fa-clock"></i> Horarios Gimnasio Búnker Cross:</h4>
+                    <ul>
+                      <li><span>Lunes a Viernes:</span> <strong>6:00 AM a 9:00 AM || 5:00 PM a 9:00 PM</strong></li>
+                      <li><span>Sábados:</span> <strong>6:00 AM a 9:00 AM</strong></li>
+                    </ul>
+                    <p class="custom-schedule-note"><i class="fa-solid fa-user-gear"></i> <em>Consultar por horario de gimnasio personalizado.</em></p>
+                    <p class="location-note"><i class="fa-solid fa-building-flag"></i> <strong>Lugar Gimnasio:</strong> Av. Talara 450, Jesús María, Lima, Perú</p>
+                  </div>
+
+                  <!-- Medios de Pago con Iconos Oficiales -->
+                  <div class="payment-methods-box">
+                    <div class="pay-methods-title">
+                      <i class="fa-regular fa-credit-card"></i> Medios de Pago Aceptados:
+                    </div>
+                    <div class="payment-badges-grid">
+                      <div class="pay-badge-item"><img src="assets/pay_visa.png" alt="Visa" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_mastercard.png" alt="Mastercard" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_yape.png" alt="Yape" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_plin.png" alt="Plin" class="pay-logo-img"></div>
+                    </div>
+                  </div>
+
+                  <div class="benefits-strip">
+                    <div class="benefit-item"><i class="fa-solid fa-heart-pulse"></i> Resistencia Física</div>
+                    <div class="benefit-item"><i class="fa-solid fa-dumbbell"></i> Aumenta Músculos</div>
+                    <div class="benefit-item"><i class="fa-solid fa-person-running"></i> Gana Movilidad</div>
+                    <div class="benefit-item"><i class="fa-solid fa-user-ninja"></i> Guía de Coach</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Club Kallpa -->
+            <div class="tab-panel" id="panel-kallpa" data-category="Club de Nadadores Kallpa (Jóvenes y Adultos)">
+              <div class="promo-card">
+                <div class="image-viewer-wrapper">
+                  <img src="assets/club_nadadores_kallpa.jpg" alt="Club de Nadadores Kallpa" class="promo-image" id="img-kallpa">
+                  <button class="zoom-trigger-btn" onclick="openLightbox('assets/club_nadadores_kallpa.jpg', 'Club de Nadadores Kallpa')">
+                    <i class="fa-solid fa-expand"></i> Ver afiche completo
+                  </button>
+                </div>
+
+                <div class="promo-details">
+                  <div class="promo-header-tag kallpa-theme">
+                    <span class="tag-glow blue"><i class="fa-solid fa-trophy"></i> NATACIÓN JÓVENES & ADULTOS</span>
+                    <span class="months-tag">Aprende Desde Cero</span>
+                  </div>
+
+                  <h3 class="promo-title">Club de Nadadores Kallpa (Jóvenes Estrellas)</h3>
+                  <p class="promo-desc">Entrena y participa en competencias de Natación, Aguas Abiertas o Triatlón.</p>
+
+                  <div class="kallpa-packages">
+                    <div class="kallpa-pkg-card option-card" data-plan="Paquete Kallpa: 12 Clases x S/ 330">
+                      <div class="pkg-qty">12 Clases</div>
+                      <div class="pkg-price">S/ 330</div>
+                      <div class="pkg-note">Entrenamiento intensivo de técnica</div>
+                    </div>
+
+                    <div class="kallpa-pkg-card option-card" data-plan="Paquete Kallpa: 08 Clases x S/ 270">
+                      <div class="pkg-qty">08 Clases</div>
+                      <div class="pkg-price">S/ 270</div>
+                      <div class="pkg-note">Formación y constancia semanal</div>
+                    </div>
+                  </div>
+
+                  <!-- Schedule Box for Club Kallpa -->
+                  <div class="schedule-box natacion-theme">
+                    <h4><i class="fa-regular fa-clock"></i> Horarios Natación:</h4>
+                    <ul>
+                      <li><span>Lunes a Viernes:</span> <strong>9:00 PM a 10:00 PM</strong></li>
+                      <li><span>Sábados:</span> <strong>1:00 PM a 2:00 PM || 2:00 PM a 3:00 PM</strong></li>
+                      <li><span>Domingos:</span> <strong>9:00 AM</strong></li>
+                    </ul>
+                    <p class="location-note"><i class="fa-solid fa-water"></i> <strong>Lugar Natación:</strong> Piscina Temperada Colegio Teresa González de Fanning (Jesús María)</p>
+                  </div>
+
+                  <!-- Medios de Pago con Iconos Oficiales -->
+                  <div class="payment-methods-box">
+                    <div class="pay-methods-title">
+                      <i class="fa-regular fa-credit-card"></i> Medios de Pago Aceptados:
+                    </div>
+                    <div class="payment-badges-grid">
+                      <div class="pay-badge-item"><img src="assets/pay_visa.png" alt="Visa" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_mastercard.png" alt="Mastercard" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_yape.png" alt="Yape" class="pay-logo-img"></div>
+                      <div class="pay-badge-item"><img src="assets/pay_plin.png" alt="Plin" class="pay-logo-img"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Contacto & Horarios -->
+            <div class="tab-panel" id="panel-contacto" data-category="Información General, Horarios y Sedes">
+              <div class="promo-card">
+                <div class="image-viewer-wrapper">
+                  <img src="assets/contacto_jesus_maria.png" alt="Contacto Natación y Gimnasio Jesús María" class="promo-image" id="img-contacto">
+                  <button class="zoom-trigger-btn" onclick="openLightbox('assets/contacto_jesus_maria.png', 'Natación y Gimnasio Jesús María')">
+                    <i class="fa-solid fa-expand"></i> Ver afiche completo
+                  </button>
+                </div>
+
+                <div class="promo-details">
+                  <div class="promo-header-tag contact-theme">
+                    <span class="tag-glow green"><i class="fa-solid fa-map-location-dot"></i> HORARIOS Y SEDES</span>
+                    <span class="months-tag">Jesús María, Lima</span>
+                  </div>
+
+                  <h3 class="promo-title">Información de Sedes y Horarios Oficiales</h3>
+
+                  <!-- Complete Schedule & Location breakdown -->
+                  <div class="full-schedule-grid">
+                    
+                    <!-- Gym Schedule Card -->
+                    <div class="schedule-card gym-card">
+                      <div class="sched-header">
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <div>
+                          <strong>GIMNASIO BÚNKER CROSS</strong>
+                          <span>Av. Talara 450, Jesús María, Lima, Perú</span>
+                        </div>
+                      </div>
+                      <ul class="sched-list">
+                        <li><span>Lunes a Viernes:</span> <strong>6:00 AM a 9:00 AM || 5:00 PM a 9:00 PM</strong></li>
+                        <li><span>Sábados:</span> <strong>6:00 AM a 9:00 AM</strong></li>
+                      </ul>
+                      <p class="sched-extra"><i class="fa-solid fa-comments"></i> <em>Consultar por horario de gimnasio personalizado.</em></p>
+                      <a href="https://maps.google.com/?q=Av.+Talara+450+Jesus+Maria" target="_blank" rel="noopener" class="map-link">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Ver en Google Maps
+                      </a>
+                    </div>
+
+                    <!-- Swimming Schedule Card -->
+                    <div class="schedule-card swim-card">
+                      <div class="sched-header">
+                        <i class="fa-solid fa-person-swimming"></i>
+                        <div>
+                          <strong>NATACIÓN Y CLUB KALLPA</strong>
+                          <span>Piscina Temperada Colegio Teresa González de Fanning (Jesús María)</span>
+                        </div>
+                      </div>
+                      <ul class="sched-list">
+                        <li><span>Lunes a Viernes:</span> <strong>9:00 PM a 10:00 PM</strong></li>
+                        <li><span>Sábados:</span> <strong>1:00 PM a 2:00 PM || 2:00 PM a 3:00 PM</strong></li>
+                        <li><span>Domingos:</span> <strong>9:00 AM</strong></li>
+                      </ul>
+                      <a href="https://maps.google.com/?q=Colegio+Teresa+Gonzalez+de+Fanning+Jesus+Maria" target="_blank" rel="noopener" class="map-link">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Ver en Google Maps
+                      </a>
+                    </div>
+
+                  </div>
+
+                  <div class="contact-info-list">
+                    <div class="info-card">
+                      <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                      <div class="info-text">
+                        <strong>Teléfonos y WhatsApp Directos:</strong>
+                        <div class="numbers-row">
+                          <button class="num-chip" onclick="selectNumberAndReserve('955882306')">
+                            <i class="fa-solid fa-mobile-screen"></i> 955 882 306
+                          </button>
+                          <button class="num-chip" onclick="selectNumberAndReserve('992272521')">
+                            <i class="fa-solid fa-mobile-screen"></i> 992 272 521
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="info-card">
+                      <div class="info-icon social-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                      <div class="info-text">
+                        <strong>Nuestras Redes Sociales Oficiales:</strong>
+                        <div class="numbers-row">
+                          <a href="https://www.instagram.com/kallpa_triatlon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="social-chip instagram">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                          </a>
+                          <a href="https://www.tiktok.com/@kallpa.triatlon.clases?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" class="social-chip tiktok">
+                            <i class="fa-brands fa-tiktok"></i> TikTok
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- /frame-content -->
+        </div> <!-- /mobile-frame -->
+      </div> <!-- /mobile-frame-container -->
+
+      <!-- Dynamic Message Preview & Customizer -->
+      <section class="reservation-box">
+        <div class="box-header">
+          <div class="box-title">
+            <i class="fa-brands fa-whatsapp whatsapp-icon-spin"></i>
+            <h3>Confirmar Reserva por WhatsApp</h3>
+          </div>
+          <span class="pulse-dot"></span>
+        </div>
+
+        <div class="message-preview-container">
+          <label for="custom-msg-input"><i class="fa-solid fa-comment-dots"></i> Mensaje Pre-llenado (Auto-Generado):</label>
+          <textarea id="custom-msg-input" class="message-textarea" rows="3" placeholder="Mensaje para el asesor de WhatsApp..."></textarea>
+        </div>
+
+        <!-- WhatsApp Action Buttons with Contact Numbers (955882306 / 992272521) -->
+        <div class="cta-action-area">
+          <div class="cta-label">Elige la línea de atención para enviar tu mensaje:</div>
+          
+          <div class="whatsapp-btn-group">
+            <button class="wa-main-btn" onclick="openWhatsApp('955882306')">
+              <div class="wa-btn-left">
+                <i class="fa-brands fa-whatsapp wa-big-icon"></i>
+                <div class="wa-btn-text">
+                  <span class="wa-btn-action">RESERVAR AHORA</span>
+                  <span class="wa-btn-number"><i class="fa-solid fa-mobile-screen"></i> 955 882 306</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right wa-arrow"></i>
+            </button>
+
+            <button class="wa-secondary-btn" onclick="openWhatsApp('992272521')">
+              <div class="wa-btn-left">
+                <i class="fa-brands fa-whatsapp wa-big-icon"></i>
+                <div class="wa-btn-text">
+                  <span class="wa-btn-action">RESERVAR AHORA</span>
+                  <span class="wa-btn-number"><i class="fa-solid fa-mobile-screen"></i> 992 272 521</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right wa-arrow"></i>
+            </button>
+          </div>
+
+          <div class="contacts-footer">
+            <span><i class="fa-solid fa-headset"></i> Atención rápida e inmediata | Teléfonos de contacto: <strong>955882306 / 992272521</strong></span>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/kallpa_triatlon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" class="footer-social-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://www.tiktok.com/@kallpa.triatlon.clases?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" class="footer-social-link"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+      </div>
+      <p>© 2026 Kallpa & Búnker Cross. Natación y Gimnasio Jesús María.</p>
+    </footer>
+
+  </div>
+
+  <!-- Lightbox Modal for High-Res Image Zoom -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img id="lightbox-img" src="" alt="Afiche Promocional Ampliado">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
