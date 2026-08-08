@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 /* ==========================================================================
    KALLPA & BÚNKER CROSS - DESIGN SYSTEM & MOBILE SPA STYLES
    ========================================================================== */
@@ -1507,3 +1509,299 @@ body {
 .footer-social-link:hover {
   color: var(--accent-cyan);
 }
+
+/* ==========================================================================
+   PROMOTIONAL FLYER CARDS DESIGN SYSTEM
+   ========================================================================== */
+
+.flyers-responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .flyers-responsive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.promo-flyer-card {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border-glass);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.promo-flyer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+}
+
+/* Theme: Búnker Cross (Dark Concrete + Orange) */
+.promo-flyer-card.bunker-flyer-theme {
+  background: 
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.015),
+      rgba(255, 255, 255, 0.015) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    #0e1117;
+  border-color: rgba(255, 90, 31, 0.35);
+}
+
+/* Theme: Kallpa Natación (Navy + Aqua) */
+.promo-flyer-card.kallpa-flyer-theme {
+  background: 
+    repeating-linear-gradient(
+      -45deg,
+      rgba(37, 183, 224, 0.03),
+      rgba(37, 183, 224, 0.03) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    #04192e;
+  border-color: rgba(37, 183, 224, 0.35);
+}
+
+.flyer-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.flyer-brand-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.bunker-flyer-theme .flyer-brand-tag {
+  background: rgba(255, 90, 31, 0.18);
+  color: #ff5a1f;
+  border: 1px solid #ff5a1f;
+}
+
+.kallpa-flyer-theme .flyer-brand-tag {
+  background: rgba(37, 183, 224, 0.18);
+  color: #25b7e0;
+  border: 1px solid #25b7e0;
+}
+
+.flyer-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.65rem;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.flyer-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+.flyer-price-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .flyer-price-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flyer-price-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.flyer-price-card:hover, .flyer-price-card.selected {
+  transform: translateY(-2px);
+}
+
+.bunker-flyer-theme .flyer-price-card:hover,
+.bunker-flyer-theme .flyer-price-card.selected {
+  border-color: #ff5a1f;
+  box-shadow: 0 0 12px rgba(255, 90, 31, 0.35);
+  background: rgba(255, 90, 31, 0.12);
+}
+
+.kallpa-flyer-theme .flyer-price-card:hover,
+.kallpa-flyer-theme .flyer-price-card.selected {
+  border-color: #25b7e0;
+  box-shadow: 0 0 12px rgba(37, 183, 224, 0.35);
+  background: rgba(37, 183, 224, 0.12);
+}
+
+.flyer-price-card.featured {
+  border-width: 2px;
+}
+
+.bunker-flyer-theme .flyer-price-card.featured {
+  border-color: #ff5a1f;
+}
+
+.kallpa-flyer-theme .flyer-price-card.featured {
+  border-color: #25b7e0;
+}
+
+.flyer-badge {
+  position: absolute;
+  top: -10px;
+  right: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.bunker-flyer-theme .flyer-badge {
+  background: #ff5a1f;
+  color: #0e1117;
+}
+
+.kallpa-flyer-theme .flyer-badge {
+  background: #25b7e0;
+  color: #04192e;
+}
+
+.flyer-price-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.flyer-price-val {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.flyer-schedule-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.flyer-schedule-box strong {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.flyer-schedule-box ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--text-secondary);
+}
+
+.flyer-includes-box {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.flyer-includes-box strong {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.flyer-includes-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.flyer-includes-list li i {
+  margin-right: 4px;
+}
+
+.bunker-flyer-theme .flyer-includes-list li i { color: #ff5a1f; }
+.kallpa-flyer-theme .flyer-includes-list li i { color: #25b7e0; }
+
+.flyer-cta-bar {
+  width: 100%;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  border: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.bunker-flyer-theme .flyer-cta-bar {
+  background: #ff5a1f;
+  color: #0e1117;
+}
+
+.kallpa-flyer-theme .flyer-cta-bar {
+  background: #25b7e0;
+  color: #04192e;
+}
+
+.flyer-cta-bar:hover {
+  opacity: 0.92;
+}
+
+.flyer-cta-text {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.flyer-cta-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
