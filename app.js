@@ -72,10 +72,10 @@ const PROMO_FLYERS_DATA = {
     brand: 'Bünker Cross',
     accentColor: '#ff5a1f',
     themeClass: 'bunker-flyer-theme',
-    category: 'OPENBOX',
-    title: 'OPENBOX ENTRENAMIENTO LIBRE',
+    category: 'GIMNASIO LIBRE',
+    title: 'GIMNASIO LIBRE (USO DE INSTALACIONES)',
     image: 'assets/flyer_openbox.png',
-    description: 'Uso libre de instalaciones y equipamiento GymBox Búnker',
+    description: 'Uso libre de máquinas, instalaciones y equipamiento GymBox Búnker',
     priceOptions: [
       { label: 'MENSUALIDAD', price: 'S/ 70', featured: false },
       { label: 'PAQUETE X2 MESES', price: 'S/ 120', featured: true, badge: 'AHORRA S/ 20' }
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'paddle-openbox': (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
-      return `¡Hola! Deseo información sobre los servicios de Paddle Surf y OpenBox.${planDetail} Por favor brindar vacantes y detalles.`;
+      return `¡Hola! Deseo información sobre los servicios de Paddle Surf y Gimnasio Libre.${planDetail} Por favor brindar vacantes y detalles.`;
     },
     promociones: (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
