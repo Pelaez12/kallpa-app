@@ -4,7 +4,6 @@
  * high-resolution Lightbox viewer, and dynamic promotional flyer rendering.
  */
 
-// Dataset containing all 5 promotional flyers
 const PROMO_FLYERS_DATA = {
   bunkerNatacion: {
     id: 'bunkerNatacion',
@@ -13,6 +12,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'bunker-flyer-theme',
     category: 'NATACIÓN PERSONALIZADA',
     title: 'CLASES DE NATACIÓN',
+    image: 'assets/flyer_bunker_natacion.png',
     description: 'Entrenamiento individual 1 a 1 en Piscina Temperada El Fanning',
     priceOptions: [
       { label: '1 CLASE (1 HORA)', price: 'S/ 70', featured: false },
@@ -32,6 +32,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'bunker-flyer-theme',
     category: 'MUSCULACIÓN (GYMBOX)',
     title: 'ENTRENAMIENTO PERSONALIZADO',
+    image: 'assets/flyer_bunker_gymbox.png',
     description: 'Rutina de musculación y mejora física guiada por Coach en GymBox',
     priceOptions: [
       { label: '8 SESIONES', price: 'S/ 200', featured: false },
@@ -51,6 +52,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'bunker-flyer-theme',
     category: 'PADDLE SURF',
     title: 'PADDLE SURF EXPERIENCIA',
+    image: 'assets/flyer_paddle_surf.png',
     description: 'Aventura en el mar con equipo completo e instructor capacitado',
     priceOptions: [
       { label: '1 SESIÓN', price: 'S/ 110', featured: false },
@@ -72,6 +74,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'bunker-flyer-theme',
     category: 'OPENBOX',
     title: 'OPENBOX ENTRENAMIENTO LIBRE',
+    image: 'assets/flyer_openbox.png',
     description: 'Uso libre de instalaciones y equipamiento GymBox Búnker',
     priceOptions: [
       { label: 'MENSUALIDAD', price: 'S/ 70', featured: false },
@@ -90,6 +93,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'bunker-flyer-theme',
     category: 'ATLETAS JUVENILES',
     title: 'ELITE TRAINING CAMP',
+    image: 'assets/promo_atletas_juveniles.jpg',
     description: 'ATHLETIC SANS • Planificación integral para las Promesas del Deporte (Fuerza Funcional, Velocidad Reactiva y Acondicionamiento Metabólico)',
     priceOptions: [
       { label: '1 MES', price: 'S/ 150', featured: false },
@@ -117,6 +121,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'kallpa-flyer-theme',
     category: 'KALLPA NATACIÓN',
     title: 'CLASES DE NATACIÓN',
+    image: 'assets/flyer_kallpa_natacion.jpg',
     description: 'Formación técnica y entrenamiento personalizado de natación',
     priceOptions: [
       { label: '1 CLASE (1 HORA)', price: 'S/ 70', featured: false },
@@ -138,6 +143,15 @@ const PROMO_FLYERS_DATA = {
  */
 function renderPromoFlyer(data) {
   if (!data) return '';
+
+  const imageHtml = data.image ? `
+    <div class="image-viewer-wrapper">
+      <img src="${data.image}" alt="${data.title}" class="promo-image" id="flyer-img-${data.id}">
+      <button class="zoom-trigger-btn" onclick="openLightbox('${data.image}', '${data.brand} - ${data.title}')">
+        <i class="fa-solid fa-expand"></i> Ver afiche completo
+      </button>
+    </div>
+  ` : '';
 
   const priceOptionsHtml = data.priceOptions.map((opt) => `
     <div class="flyer-price-card option-card ${opt.featured ? 'featured' : ''}" data-plan="${data.brand} - ${data.category} (${opt.label} x ${opt.price})">
@@ -167,6 +181,7 @@ function renderPromoFlyer(data) {
 
   return `
     <div class="promo-flyer-card ${data.themeClass}" id="flyer-${data.id}">
+      ${imageHtml}
       <div class="flyer-body">
         <span class="flyer-brand-tag">${data.brand} • ${data.category}</span>
         <h3 class="flyer-title">${data.title}</h3>
