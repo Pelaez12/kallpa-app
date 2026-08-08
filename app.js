@@ -83,6 +83,33 @@ const PROMO_FLYERS_DATA = {
     ctaText: 'RESERVAR AHORA',
     ctaSubtext: 'Atención inmediata por WhatsApp'
   },
+  bunkerAtletas: {
+    id: 'bunkerAtletas',
+    brand: 'GYMBOX BÜNKER',
+    accentColor: '#ff5a1f',
+    themeClass: 'bunker-flyer-theme',
+    category: 'ATLETAS JUVENILES',
+    title: 'ELITE TRAINING CAMP',
+    description: 'ATHLETIC SANS • Planificación integral para las Promesas del Deporte (Fuerza Funcional, Velocidad Reactiva y Acondicionamiento Metabólico)',
+    priceOptions: [
+      { label: '1 MES', price: 'S/ 150', featured: false },
+      { label: '3 MESES', price: 'S/ 360', featured: false, badge: 'AHORRO' },
+      { label: '6 MESES', price: 'S/ 660', featured: true, badge: 'ELITE' }
+    ],
+    schedule: [
+      'Lunes a Jueves: 4:00 PM & 5:00 PM',
+      'Lunes: Tren Inferior | Martes: Tren Superior',
+      'Miércoles: Velocidad & Potencia | Jueves: Técnica & Trote'
+    ],
+    includes: [
+      'Activation Warm up',
+      'Core Stability',
+      'Strength & Technique',
+      'Metcon (W.O.D)'
+    ],
+    ctaText: 'RESERVAR AHORA',
+    ctaSubtext: 'Inscripciones abiertas por WhatsApp'
+  },
   kallpaNatacion: {
     id: 'kallpaNatacion',
     brand: 'Kallpa Natación',
@@ -168,6 +195,7 @@ function mountFlyers() {
   const mounts = {
     'mount-bunker-natacion': 'bunkerNatacion',
     'mount-bunker-gymbox': 'bunkerGymBox',
+    'mount-bunker-atletas': 'bunkerAtletas',
     'mount-paddle-surf': 'bunkerPaddleSurf',
     'mount-openbox': 'bunkerOpenBox'
   };
@@ -221,6 +249,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'gimnasio-pers': (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
       return `¡Hola! Deseo información y agendar mi plan de Entrenamiento Personalizado de Musculación y Mejora Física en el GymBox BÜNKER CROSS.${planDetail}`;
+    },
+    'atletas-juveniles': (plan) => {
+      const planDetail = plan ? ` Interés en el plan: [${plan}].` : '';
+      return `¡Hola! Deseo información y reservar una vacante para el Elite Training Camp (Atletas Juveniles) en GymBox Bünker.${planDetail}`;
     },
     'paddle-openbox': (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
