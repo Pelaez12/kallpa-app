@@ -1,15 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://info.comunidadfortaleza.com/</loc>
     <lastmod>2026-08-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://info.comunidadfortaleza.com/assets/logo.png</image:loc>
+      <image:title>Kallpa Triatlón y Búnker Cross Jesús María</image:title>
+      <image:caption>Academia de natación temperada y gimnasio funcional en Jesús María</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://info.comunidadfortaleza.com/assets/promo_natacion_integral.jpg</image:loc>
+      <image:title>Promoción Especial Natación Integral y Gimnasio Búnker Cross</image:title>
+      <image:caption>3 meses de entrenamiento combinado natación temperada Fanning y gym funcional</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://info.comunidadfortaleza.com/assets/flyer_bunker_gymbox.png</image:loc>
+      <image:title>Gimnasio Personalizado Musculación GymBox Búnker Cross</image:title>
+      <image:caption>Entrenamiento guiado 1 a 1 de musculación e hipertrofia Av. Talara 450 Jesús María</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://info.comunidadfortaleza.com/assets/flyer_bunker_natacion.png</image:loc>
+      <image:title>Clases Personalizadas de Natación 1 a 1 Piscina Fanning</image:title>
+      <image:caption>Instrucción individual acelerada en piscina temperada Colegio Teresa González de Fanning</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://info.comunidadfortaleza.com/assets/promo_atletas_juveniles.jpg</image:loc>
+      <image:title>Elite Training Camp - Atletas Juveniles Athletic Sans</image:title>
+      <image:caption>Planificación de fuerza funcional, velocidad reactiva y acondicionamiento para promesas del deporte</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://info.comunidadfortaleza.com/assets/flyer_paddle_surf.png</image:loc>
+      <image:title>Paddle Surf Experiencia y Clases en Mar</image:title>
+      <image:caption>Clases de paddle surf con equipo completo, wetsuit e instructor dedicado</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://info.comunidadfortaleza.com/assets/flyer_openbox.png</image:loc>
+      <image:title>Gimnasio Libre Uso de Instalaciones GymBox Búnker</image:title>
+      <image:caption>Acceso libre a máquinas y equipamiento de musculación Jesús María</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#natacion</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#bunker</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#kallpa</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#natacion-pers</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#gimnasio-pers</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#atletas-juveniles</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#paddle-openbox</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#promociones</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://info.comunidadfortaleza.com/#contacto</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://info.comunidadfortaleza.com/sitemap.html</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

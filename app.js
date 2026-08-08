@@ -312,6 +312,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
+      // Update URL hash for SEO Deep Indexing
+      if (history.replaceState) {
+        history.replaceState(null, null, `#${targetTab}`);
+      } else {
+        location.hash = `#${targetTab}`;
+      }
+
       // Clear card selections in all panels
       document.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
 
@@ -319,6 +326,15 @@ document.addEventListener('DOMContentLoaded', () => {
       updateMessage();
     });
   });
+
+  // Handle URL hash on initial page load (SEO Deep Links)
+  const initialHash = location.hash.replace('#', '');
+  if (initialHash) {
+    const targetBtn = document.querySelector(`.nav-btn[data-tab="${initialHash}"]`);
+    if (targetBtn) {
+      targetBtn.click();
+    }
+  }
 
   // Option Card click handler via Event Delegation (handles static and dynamically rendered cards)
   document.addEventListener('click', (e) => {
