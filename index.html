@@ -90,6 +90,16 @@
           <span class="btn-text">Gimnasio Personalizado</span>
           <span class="btn-badge orange">GYMBOX</span>
         </button>
+        <button class="nav-btn" data-tab="paddle-openbox" role="tab" aria-selected="false" aria-controls="panel-paddle-openbox">
+          <span class="btn-icon">🏄‍♂️</span>
+          <span class="btn-text">Paddle Surf & OpenBox</span>
+          <span class="btn-badge">NUEVO</span>
+        </button>
+        <button class="nav-btn" data-tab="promociones" role="tab" aria-selected="false" aria-controls="panel-promociones">
+          <span class="btn-icon">🔥</span>
+          <span class="btn-text">Catálogo Promociones</span>
+          <span class="btn-badge">TODOS (5)</span>
+        </button>
         <button class="nav-btn" data-tab="contacto" role="tab" aria-selected="false" aria-controls="panel-contacto">
           <span class="btn-icon">📍</span>
           <span class="btn-text">Horarios y Sedes</span>
@@ -271,6 +281,7 @@
 
             <!-- Panel 3: Clases de Natación (Grupales) -->
             <div class="tab-panel" id="panel-kallpa" data-category="Clases de Natación (Grupales)">
+              <div id="mount-kallpa-natacion"></div>
               <div class="promo-card">
                 <div class="image-viewer-wrapper">
                   <img src="assets/club_nadadores_kallpa.jpg" alt="Clases de Natación Kallpa" class="promo-image" id="img-kallpa">
@@ -331,6 +342,7 @@
 
             <!-- Panel 4: NUEVA VENTANA - Natación Personalizada -->
             <div class="tab-panel" id="panel-natacion-pers" data-category="Natación Personalizada (1 a 1)">
+              <div id="mount-bunker-natacion"></div>
               <div class="promo-card">
                 <div class="image-viewer-wrapper">
                   <img src="assets/club_nadadores_kallpa.jpg" alt="Natación Personalizada" class="promo-image">
@@ -400,6 +412,7 @@
 
             <!-- Panel 5: NUEVA VENTANA - Gimnasio Personalizado -->
             <div class="tab-panel" id="panel-gimnasio-pers" data-category="Gimnasio Personalizado (GymBox)">
+              <div id="mount-bunker-gymbox"></div>
               <div class="promo-card">
                 <div class="image-viewer-wrapper">
                   <img src="assets/promo_bunker_cross.png" alt="Gimnasio Personalizado Búnker Cross" class="promo-image">
@@ -467,7 +480,18 @@
               </div>
             </div>
 
-            <!-- Panel 6: Contacto & Horarios Complete Breakdown -->
+            <!-- Panel 6: Paddle Surf & OpenBox -->
+            <div class="tab-panel" id="panel-paddle-openbox" data-category="Paddle Surf & OpenBox">
+              <div id="mount-paddle-surf"></div>
+              <div id="mount-openbox"></div>
+            </div>
+
+            <!-- Panel 7: Catálogo Promociones -->
+            <div class="tab-panel" id="panel-promociones" data-category="Catálogo de Promociones">
+              <div class="flyers-responsive-grid" id="mount-promociones-grid"></div>
+            </div>
+
+            <!-- Panel 8: Contacto & Horarios Complete Breakdown -->
             <div class="tab-panel" id="panel-contacto" data-category="Información General, Horarios y Sedes">
               <div class="promo-card">
                 <div class="image-viewer-wrapper">

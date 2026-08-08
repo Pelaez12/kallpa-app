@@ -161,7 +161,37 @@ function renderPromoFlyer(data) {
   `;
 }
 
+/**
+ * Populate flyer mount containers with dynamic promo flyer cards
+ */
+function mountFlyers() {
+  const mounts = {
+    'mount-bunker-natacion': 'bunkerNatacion',
+    'mount-bunker-gymbox': 'bunkerGymBox',
+    'mount-kallpa-natacion': 'kallpaNatacion',
+    'mount-paddle-surf': 'bunkerPaddleSurf',
+    'mount-openbox': 'bunkerOpenBox'
+  };
+
+  for (const [elemId, key] of Object.entries(mounts)) {
+    const container = document.getElementById(elemId);
+    if (container && PROMO_FLYERS_DATA[key]) {
+      container.innerHTML = renderPromoFlyer(PROMO_FLYERS_DATA[key]);
+    }
+  }
+
+  const promoGrid = document.getElementById('mount-promociones-grid');
+  if (promoGrid) {
+    promoGrid.innerHTML = Object.values(PROMO_FLYERS_DATA)
+      .map(data => renderPromoFlyer(data))
+      .join('');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Populate flyer mount containers
+  mountFlyers();
+
   // DOM Elements
   const navBtns = document.querySelectorAll('.nav-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
