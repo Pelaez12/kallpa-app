@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pelaez12.github.io/kallpa-app/sitemap.xml
