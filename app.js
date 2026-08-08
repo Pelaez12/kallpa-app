@@ -168,7 +168,6 @@ function mountFlyers() {
   const mounts = {
     'mount-bunker-natacion': 'bunkerNatacion',
     'mount-bunker-gymbox': 'bunkerGymBox',
-    'mount-kallpa-natacion': 'kallpaNatacion',
     'mount-paddle-surf': 'bunkerPaddleSurf',
     'mount-openbox': 'bunkerOpenBox'
   };
