@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeTab = 'natacion';
   let selectedPlan = '';
 
-  // Standard pre-filled message templates
+  // Standard pre-filled message templates per window / tab
   const messageTemplates = {
     natacion: (plan) => {
       const planDetail = plan ? ` Interés en el plan: [${plan}].` : '';
@@ -27,7 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     kallpa: (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
-      return `¡Hola! Quisiera más información sobre las Clases de Natación (Piscina Temperada Colegio Fanning).${planDetail} Por favor brindar detalles de horarios y vacantes disponibles.`;
+      return `¡Hola! Quisiera más información sobre las Clases Grupales de Natación (Piscina Temperada Colegio Fanning).${planDetail} Por favor brindar detalles de horarios y vacantes disponibles.`;
+    },
+    'natacion-pers': (plan) => {
+      const planDetail = plan ? ` Interés en el paquete: [${plan}].` : '';
+      return `¡Hola! Quisiera información y reservar mi horario para Natación Personalizada (Clases 1 a 1 en Piscina Fanning).${planDetail} Por favor brindar vacantes para agendar.`;
+    },
+    'gimnasio-pers': (plan) => {
+      const planDetail = plan ? ` Interés en: [${plan}].` : '';
+      return `¡Hola! Deseo información y agendar mi plan de Entrenamiento Personalizado de Musculación y Mejora Física en el GymBox BÜNKER CROSS.${planDetail}`;
     },
     contacto: () => {
       return `¡Hola! Quisiera realizar una consulta general sobre las Clases de Natación y Gimnasio Búnker Cross en Jesús María.`;

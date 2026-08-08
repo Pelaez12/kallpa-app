@@ -311,7 +311,7 @@ body {
 }
 
 /* Navigation Pill Menu (Simple Menu de Botones) */
-.nav-menu {
+.nav-menu.grid-menu-6 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -321,10 +321,10 @@ body {
   background: var(--bg-card);
   border: 1.5px solid var(--border-glass);
   border-radius: var(--radius-md);
-  padding: 10px 12px;
+  padding: 10px 10px;
   color: var(--text-secondary);
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -335,6 +335,7 @@ body {
   position: relative;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .nav-btn .btn-icon {
@@ -344,7 +345,8 @@ body {
 
 .nav-btn .btn-text {
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.2;
 }
 
 .nav-btn .btn-badge {
@@ -400,6 +402,28 @@ body {
 .nav-btn[data-tab="kallpa"].active .btn-badge {
   background: var(--accent-gold);
   color: #000;
+}
+
+.nav-btn.highlight-cyan.active {
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.25), rgba(19, 27, 46, 0.95));
+  border-color: var(--accent-cyan);
+  box-shadow: 0 4px 18px var(--accent-cyan-glow);
+}
+
+.nav-btn.highlight-cyan .btn-badge.cyan {
+  background: var(--accent-cyan);
+  color: #000000;
+}
+
+.nav-btn.highlight-orange.active {
+  background: linear-gradient(135deg, rgba(255, 94, 19, 0.25), rgba(19, 27, 46, 0.95));
+  border-color: var(--accent-orange);
+  box-shadow: 0 4px 18px rgba(255, 94, 19, 0.4);
+}
+
+.nav-btn.highlight-orange .btn-badge.orange {
+  background: var(--accent-orange);
+  color: #ffffff;
 }
 
 /* Standard Mobile Frame Container */
