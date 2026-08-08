@@ -40,6 +40,7 @@
           <div class="header-contacts">
             <button class="contact-pill-btn" onclick="openWhatsApp('955882306')"><i class="fa-brands fa-whatsapp"></i> 955 882 306</button>
             <button class="contact-pill-btn" onclick="openWhatsApp('992272521')"><i class="fa-brands fa-whatsapp"></i> 992 272 521</button>
+            <button class="contact-pill-btn chatbot" onclick="openWhatsApp('902937359')"><i class="fa-solid fa-robot"></i> Chatbot 24/7: 902 937 359</button>
           </div>
 
           <div class="header-socials">
@@ -452,6 +453,19 @@
                   </div>
 
                   <div class="contact-info-list">
+                    <div class="info-card chatbot-card">
+                      <div class="info-icon chatbot-icon"><i class="fa-solid fa-robot"></i></div>
+                      <div class="info-text">
+                        <strong>🤖 Atención Inmediata Chatbot (24/7):</strong>
+                        <p>Respuesta instantánea para información de clases, vacantes y reservas.</p>
+                        <div class="numbers-row">
+                          <button class="num-chip chatbot-chip" onclick="selectNumberAndReserve('902937359')">
+                            <i class="fa-brands fa-whatsapp"></i> Chatbot 24/7: 902 937 359
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
                     <div class="info-card">
                       <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
                       <div class="info-text">
@@ -505,11 +519,22 @@
           <textarea id="custom-msg-input" class="message-textarea" rows="3" placeholder="Mensaje para el asesor de WhatsApp..."></textarea>
         </div>
 
-        <!-- WhatsApp Action Buttons with Contact Numbers (955882306 / 992272521) -->
+        <!-- WhatsApp Action Buttons with Contact Numbers (955882306 / 992272521 / 902937359) -->
         <div class="cta-action-area">
           <div class="cta-label">Elige la línea de atención para enviar tu mensaje:</div>
           
           <div class="whatsapp-btn-group">
+            <button class="wa-chatbot-btn" onclick="openWhatsApp('902937359')">
+              <div class="wa-btn-left">
+                <i class="fa-solid fa-robot wa-big-icon"></i>
+                <div class="wa-btn-text">
+                  <span class="wa-btn-action">ATENCIÓN INMEDIATA CHATBOT (24/7)</span>
+                  <span class="wa-btn-number"><i class="fa-solid fa-mobile-screen"></i> 902 937 359</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right wa-arrow"></i>
+            </button>
+
             <button class="wa-main-btn" onclick="openWhatsApp('955882306')">
               <div class="wa-btn-left">
                 <i class="fa-brands fa-whatsapp wa-big-icon"></i>
@@ -534,7 +559,7 @@
           </div>
 
           <div class="contacts-footer">
-            <span><i class="fa-solid fa-headset"></i> Atención rápida e inmediata | Teléfonos de contacto: <strong>955882306 / 992272521</strong></span>
+            <span><i class="fa-solid fa-headset"></i> Atención rápida e inmediata | Chatbot: <strong>902 937 359</strong> | Asesores: <strong>955 882 306 / 992 272 521</strong></span>
           </div>
         </div>
 

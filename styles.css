@@ -192,6 +192,17 @@ body {
   color: #000;
 }
 
+.contact-pill-btn.chatbot {
+  background: rgba(0, 210, 255, 0.16);
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+}
+
+.contact-pill-btn.chatbot:hover {
+  background: var(--accent-cyan);
+  color: #000;
+}
+
 /* Redes Sociales en la parte Superior (Instagram & TikTok) */
 .header-socials {
   display: flex;
@@ -1370,6 +1381,50 @@ body {
 .wa-main-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 24px var(--whatsapp-glow);
+}
+
+.wa-chatbot-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #00d2ff 0%, #0072ff 100%);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 210, 255, 0.35);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.wa-chatbot-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 210, 255, 0.5);
+}
+
+.info-card.chatbot-card {
+  border-color: rgba(0, 210, 255, 0.4);
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.08) 0%, var(--bg-card) 100%);
+}
+
+.info-icon.chatbot-icon {
+  background: rgba(0, 210, 255, 0.2);
+  color: var(--accent-cyan);
+}
+
+.num-chip.chatbot-chip {
+  background: rgba(0, 210, 255, 0.16);
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+}
+
+.num-chip.chatbot-chip:hover {
+  background: var(--accent-cyan);
+  color: #000;
 }
 
 .wa-secondary-btn:hover {
