@@ -141,7 +141,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'triatlon-flyer-theme',
     category: 'TRIATLÓN',
     title: 'NADAR + CICLISMO + RUNNING',
-    image: 'assets/flyer_triatlon.png',
+    image: 'assets/flyer_triatlon.jpg',
     description: 'Únete a nuestros entrenamientos para tu próxima Triatlón y cruza la meta con una guía planificada y en equipo.',
     priceOptions: [
       { label: 'PLAN MENSUAL', price: 'S/ 330', featured: false },
