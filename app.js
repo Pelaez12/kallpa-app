@@ -305,10 +305,12 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.setAttribute('aria-selected', 'true');
 
       // Update Tab Panels
+      let activePanel = null;
       tabPanels.forEach(panel => {
         panel.classList.remove('active');
         if (panel.id === `panel-${targetTab}`) {
           panel.classList.add('active');
+          activePanel = panel;
         }
       });
 
@@ -324,6 +326,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Update WhatsApp Message Textarea
       updateMessage();
+
+      // Smooth scroll to the active panel so the user sees the content immediately
+      if (activePanel) {
+        setTimeout(() => {
+          activePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
+      }
     });
   });
 
