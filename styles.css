@@ -439,6 +439,17 @@ body {
   color: #ffffff;
 }
 
+.nav-btn.highlight-red.active {
+  background: linear-gradient(135deg, rgba(229, 62, 62, 0.25), rgba(19, 27, 46, 0.95));
+  border-color: #e53e3e;
+  box-shadow: 0 4px 18px rgba(229, 62, 62, 0.4);
+}
+
+.nav-btn.highlight-red .btn-badge.red {
+  background: #e53e3e;
+  color: #ffffff;
+}
+
 /* Standard Mobile Frame Container */
 .mobile-frame-container {
   width: 100%;
@@ -1627,6 +1638,20 @@ body {
   border-color: rgba(37, 183, 224, 0.35);
 }
 
+/* Theme: Triatlón (Dark + Red/Crimson) */
+.promo-flyer-card.triatlon-flyer-theme {
+  background: 
+    repeating-linear-gradient(
+      -45deg,
+      rgba(229, 62, 62, 0.03),
+      rgba(229, 62, 62, 0.03) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    #120a0a;
+  border-color: rgba(229, 62, 62, 0.35);
+}
+
 .flyer-body {
   padding: 20px;
   display: flex;
@@ -1656,6 +1681,12 @@ body {
   background: rgba(37, 183, 224, 0.18);
   color: #25b7e0;
   border: 1px solid #25b7e0;
+}
+
+.triatlon-flyer-theme .flyer-brand-tag {
+  background: rgba(229, 62, 62, 0.18);
+  color: #e53e3e;
+  border: 1px solid #e53e3e;
 }
 
 .flyer-title {
@@ -1717,6 +1748,13 @@ body {
   background: rgba(37, 183, 224, 0.12);
 }
 
+.triatlon-flyer-theme .flyer-price-card:hover,
+.triatlon-flyer-theme .flyer-price-card.selected {
+  border-color: #e53e3e;
+  box-shadow: 0 0 12px rgba(229, 62, 62, 0.35);
+  background: rgba(229, 62, 62, 0.12);
+}
+
 .flyer-price-card.featured {
   border-width: 2px;
 }
@@ -1727,6 +1765,10 @@ body {
 
 .kallpa-flyer-theme .flyer-price-card.featured {
   border-color: #25b7e0;
+}
+
+.triatlon-flyer-theme .flyer-price-card.featured {
+  border-color: #e53e3e;
 }
 
 .flyer-badge {
@@ -1749,6 +1791,11 @@ body {
 .kallpa-flyer-theme .flyer-badge {
   background: #25b7e0;
   color: #04192e;
+}
+
+.triatlon-flyer-theme .flyer-badge {
+  background: #e53e3e;
+  color: #ffffff;
 }
 
 .flyer-price-label {
@@ -1820,6 +1867,7 @@ body {
 
 .bunker-flyer-theme .flyer-includes-list li i { color: #ff5a1f; }
 .kallpa-flyer-theme .flyer-includes-list li i { color: #25b7e0; }
+.triatlon-flyer-theme .flyer-includes-list li i { color: #e53e3e; }
 
 .flyer-cta-bar {
   width: 100%;
@@ -1841,6 +1889,11 @@ body {
 .kallpa-flyer-theme .flyer-cta-bar {
   background: #25b7e0;
   color: #04192e;
+}
+
+.triatlon-flyer-theme .flyer-cta-bar {
+  background: #e53e3e;
+  color: #ffffff;
 }
 
 .flyer-cta-bar:hover {

@@ -133,6 +133,34 @@ const PROMO_FLYERS_DATA = {
     ],
     ctaText: 'RESERVAR AHORA',
     ctaSubtext: 'Atención inmediata por WhatsApp'
+  },
+  triatlon: {
+    id: 'triatlon',
+    brand: 'Kallpa Triatlón',
+    accentColor: '#e53e3e',
+    themeClass: 'triatlon-flyer-theme',
+    category: 'TRIATLÓN',
+    title: 'NADAR + CICLISMO + RUNNING',
+    image: 'assets/flyer_triatlon.png',
+    description: 'Únete a nuestros entrenamientos para tu próxima Triatlón y cruza la meta con una guía planificada y en equipo.',
+    priceOptions: [
+      { label: 'PLAN MENSUAL', price: 'S/ 330', featured: false },
+      { label: 'PLAN TRIMESTRAL', price: 'S/ 890', featured: true, badge: 'AHORRO' }
+    ],
+    schedule: [
+      'Natación en Piscina (entre semana)',
+      'Sábados: Acuatlón',
+      'Domingos: Fondos Ciclismo y/o Running'
+    ],
+    includes: [
+      'Club Registrado',
+      'Entrenador Certificado',
+      'Plan de Entrenamiento a distancia',
+      '3 días de entrenamiento grupal',
+      'Acceso a GymBox BÜNKER'
+    ],
+    ctaText: 'ÚNETE AL CLUB',
+    ctaSubtext: 'Inscripciones abiertas por WhatsApp'
   }
 };
 
@@ -211,6 +239,7 @@ function mountFlyers() {
     'mount-bunker-natacion': 'bunkerNatacion',
     'mount-bunker-gymbox': 'bunkerGymBox',
     'mount-bunker-atletas': 'bunkerAtletas',
+    'mount-triatlon': 'triatlon',
     'mount-paddle-surf': 'bunkerPaddleSurf',
     'mount-openbox': 'bunkerOpenBox'
   };
@@ -272,6 +301,10 @@ document.addEventListener('DOMContentLoaded', () => {
     'paddle-openbox': (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
       return `¡Hola! Deseo información sobre los servicios de Paddle Surf y Gimnasio Libre.${planDetail} Por favor brindar vacantes y detalles.`;
+    },
+    triatlon: (plan) => {
+      const planDetail = plan ? ` Interés en el plan: [${plan}].` : '';
+      return `¡Hola! Me interesa unirme al Club de Triatlón (Nadar + Ciclismo + Running).${planDetail} Quisiera información sobre inscripción, horarios y vacantes.`;
     },
     promociones: (plan) => {
       const planDetail = plan ? ` Interés en: [${plan}].` : '';
