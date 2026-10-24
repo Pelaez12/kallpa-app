@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import { chromium } from 'playwright';
+import { mkdirSync } from 'node:fs';
+mkdirSync('test-results', { recursive: true });
+const browser = await chromium.launch({headless:true,channel:process.env.PLAYWRIGHT_CHANNEL || undefined});
+const context = await browser.newContext({viewport:{width:390,height:844}});
+const page = await context.newPage();
+const calls=[];
+await page.route('**/api/push/**',async route => {
+ const name=new URL(route.request().url()).pathname.split('/').pop();calls.push(name);
+ await route.fulfill({json:name==='config'?{enabled:true,publicKey:'B'+'a'.repeat(86)}:{ok:true}});
+});
+await page.addInitScript(() => {
+ window.permissionRequests=0;window.subscribeRequests=0;window.installRequests=0;
+ const sub={endpoint:'https://fcm.googleapis.com/fcm/send/fake-ui-only',keys:{p256dh:'B'+'a'.repeat(86),auth:'a'.repeat(22)}};
+ window.fakeSubscription=null;
+ const makeSub=()=>({...sub,toJSON:()=>sub,unsubscribe:async()=>{window.fakeSubscription=null;return true;}});
+ PushManager.prototype.getSubscription=async()=>window.fakeSubscription;
+ PushManager.prototype.subscribe=async()=>{window.subscribeRequests++;window.fakeSubscription=makeSub();return window.fakeSubscription;};
+ Notification.requestPermission=async()=>{window.permissionRequests++;return 'granted';};
+});
+await page.goto('http://localhost:4173');
+await page.waitForSelector('#enable-notifications:not([hidden])');
+assert.equal(await page.evaluate(()=>permissionRequests),0);
+await page.locator('#enable-notifications').click();
+await page.waitForSelector('#disable-notifications:not([hidden])');
+assert.equal(await page.evaluate(()=>permissionRequests),1);
+assert.equal(await page.evaluate(()=>subscribeRequests),1);
+assert(calls.includes('subscribe'));
+await page.locator('#disable-notifications').click();
+await page.waitForSelector('#enable-notifications:not([hidden])');
+assert(calls.includes('unsubscribe'));
+await page.evaluate(()=>{
+ const event=new Event('beforeinstallprompt',{cancelable:true});
+ event.prompt=async()=>{window.installRequests++;};event.userChoice=Promise.resolve({outcome:'accepted'});
+ window.dispatchEvent(event);
+});
+await page.waitForSelector('#install-banner:not([hidden])');
+await page.screenshot({path:'test-results/install-banner.png'});
+await page.locator('#banner-install').click();
+assert.equal(await page.evaluate(()=>installRequests),1);
+await page.locator('#install-app').click();
+assert.equal(await page.evaluate(()=>installRequests),1);
+await page.evaluate(()=>window.dispatchEvent(new Event('appinstalled')));
+assert.equal(await page.locator('#install-app').isVisible(),false);
+console.log(JSON.stringify({passed:true,notificationPermissionOnLoad:false,subscribeUnsubscribe:true,installEventHandling:true,nativeDialogs:'simulated; physical device delivery still requires deployed HTTPS backend'}));
+await browser.close();

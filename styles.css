@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 /* ==========================================================================
    KALLPA & BÚNKER CROSS - DESIGN SYSTEM & MOBILE SPA STYLES
@@ -13,7 +12,7 @@
   
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-muted: #a3b2c8;
 
   --accent-cyan: #00d2ff;
   --accent-cyan-glow: rgba(0, 210, 255, 0.35);
@@ -36,8 +35,8 @@
 
   --radius-sm: 8px;
   --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --radius-lg: 16px;
+  --radius-xl: 16px;
 
   --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.4);
   --shadow-glow: 0 8px 32px rgba(0, 210, 255, 0.2);
@@ -69,7 +68,7 @@ body {
 /* App Viewport Container */
 .app-viewport {
   width: 100%;
-  max-width: 520px; /* Standard sleek mobile app width for desktop framing */
+  max-width: 1080px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -82,7 +81,7 @@ body {
 
 /* Header */
 .app-header {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
   background: rgba(19, 27, 46, 0.94);
@@ -1674,7 +1673,7 @@ body {
 }
 
 .flyer-brand-tag {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 1px;
@@ -1703,7 +1702,7 @@ body {
 }
 
 .flyer-title {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.65rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
@@ -1712,7 +1711,7 @@ body {
 }
 
 .flyer-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.35;
@@ -1788,7 +1787,7 @@ body {
   position: absolute;
   top: -10px;
   right: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.62rem;
   font-weight: 900;
   padding: 2px 8px;
@@ -1812,7 +1811,7 @@ body {
 }
 
 .flyer-price-label {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--text-secondary);
@@ -1820,7 +1819,7 @@ body {
 }
 
 .flyer-price-val {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.6rem;
   color: #ffffff;
 }
@@ -1837,7 +1836,7 @@ body {
 }
 
 .flyer-schedule-box strong {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-weight: 800;
   color: #ffffff;
 }
@@ -1891,7 +1890,7 @@ body {
   cursor: pointer;
   transition: opacity 0.2s ease;
   border: none;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 .bunker-flyer-theme .flyer-cta-bar {
@@ -1914,7 +1913,7 @@ body {
 }
 
 .flyer-cta-text {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.1rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -1926,3 +1925,87 @@ body {
   opacity: 0.9;
 }
 
+
+/* Usability, responsive content and PWA controls */
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--accent-cyan); outline-offset: 4px; }
+button, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { touch-action: manipulation; }
+img { max-width: 100%; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+.brand-logo-wrapper { flex-shrink: 0; }
+.brand-text, .info-text, .flyer-body, .promo-details { min-width: 0; }
+.brand-title, .flyer-title, .wa-btn-action { overflow-wrap: anywhere; }
+.hero-headline { font-size: clamp(1.5rem, 4vw, 2.3rem); line-height: 1.15; }
+.hero-subtext { margin-top: 10px; margin-inline: auto; font-size: 0.95rem; max-width: 65ch; }
+.nav-btn { min-height: 88px; box-shadow: none; }
+.nav-menu { margin-bottom: 20px; }
+.nav-btn.active { box-shadow: none; }
+.frame-bar { display: none; }
+.mobile-frame { border: 1px solid var(--border-glass); box-shadow: none; }
+.frame-content { min-height: 0; }
+.tab-panel { scroll-margin-top: 20px; }
+.promo-flyer-card { box-shadow: none; background-image: none !important; }
+.promo-flyer-card:hover { box-shadow: none; }
+.promo-flyer-card .image-viewer-wrapper { aspect-ratio: auto; }
+.promo-flyer-card .promo-image { height: auto; max-height: 520px; object-fit: contain; }
+.flyer-title { font-size: clamp(1.5rem, 3vw, 2rem); text-transform: none; letter-spacing: 0; }
+.flyer-subtitle, .flyer-schedule-box { font-size: 0.9rem; line-height: 1.6; }
+.flyer-price-card { min-height: 86px; justify-content: center; }
+.option-card { cursor: pointer; }
+.flyer-price-card.selected { outline: 2px solid var(--accent-cyan); outline-offset: 2px; }
+.flyer-cta-bar { gap: 12px; flex-wrap: wrap; min-height: 56px; }
+.flyer-cta-text { text-transform: none; font-weight: 800; }
+.muay-thai-theme { background: #191c23; border-color: #ff8a45; }
+.muay-thai-theme .flyer-brand-tag { color: #ffab78; background: #35261f; }
+.muay-thai-theme .flyer-badge, .muay-thai-theme .flyer-cta-bar { color: #19140f; background: #ff8a45; }
+.muay-thai-theme .flyer-price-card.featured { border-color: #ff8a45; }
+.reservation-note { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; }
+.plan-status { color: var(--accent-cyan); font-size: 0.9rem; margin: 12px 0; }
+.message-textarea { font-size: 1rem; min-height: 130px; }
+.message-textarea::placeholder { color: #a3b2c8; opacity: 1; }
+.zoom-trigger-btn, .map-link, .num-chip, .contact-pill-btn, .social-pill-btn { min-height: 44px; }
+.wa-main-btn .wa-btn-action, .wa-main-btn .wa-btn-number, .wa-main-btn .wa-big-icon { color: #052914; }
+.lightbox-modal { z-index: 200; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 300; padding: 12px; color: #00151e; background: #00d2ff; transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.back-to-programs { display: block; margin: 18px 0; color: var(--accent-cyan); text-align: center; padding: 12px; }
+.pwa-tools { margin: 16px; padding: 20px; background: var(--bg-card); border-radius: 12px; }
+.pwa-tools h2 { font-family: var(--font-heading); font-size: 1.3rem; }
+.pwa-tools p { margin: 8px 0 12px; font-size: 0.9rem; color: #b9c7da; }
+.pwa-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.pwa-button { padding: 12px 18px; min-height: 48px; border: 1px solid #00d2ff; color: #00151e; background: #00d2ff; border-radius: 8px; font-weight: 700; cursor: pointer; }
+.pwa-button.secondary { color: #d3e1f2; background: transparent; border-color: #708399; }
+.pwa-button:disabled { opacity: 0.6; cursor: wait; }
+.install-banner { position: fixed; bottom: max(16px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); z-index: 150; width: min(520px, calc(100% - 24px)); padding: 16px; background: #1c273e; border: 1px solid #708399; border-radius: 12px; display: flex; align-items: center; gap: 12px; }
+.install-banner img { width: 44px; height: 44px; border-radius: 8px; }
+.install-banner-copy { flex: 1; font-size: 0.85rem; }
+.install-banner-copy strong { display: block; }
+.dismiss-install { color: #fff; background: transparent; border: 0; min-width: 44px; min-height: 44px; cursor: pointer; font-size: 1.5rem; }
+.connection-status { margin: 12px 16px 0; padding: 12px; background: #33291d; color: #ffd399; border-radius: 8px; }
+@media (min-width: 720px) {
+  .main-container { padding: 28px; }
+  .header-content { flex-direction: row; align-items: center; justify-content: space-between; }
+  .header-actions { max-width: 400px; }
+  .nav-menu.grid-menu-6 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .promo-card { flex-direction: row; align-items: flex-start; }
+  .promo-card > .image-viewer-wrapper { flex: 0 0 40%; position: sticky; top: 16px; }
+  .promo-card > .promo-details { flex: 1; padding: 24px; }
+  .promo-image { max-height: 560px; }
+  .tab-panel > [id^="mount-"]:not(#mount-promociones-grid) > .promo-flyer-card { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
+  .tab-panel > [id^="mount-"]:not(#mount-promociones-grid) > .promo-flyer-card > .image-viewer-wrapper { grid-row: span 2; align-self: start; }
+  .tab-panel > [id^="mount-"]:not(#mount-promociones-grid) > .promo-flyer-card:not(:has(.image-viewer-wrapper)) { display: flex; }
+  .tab-panel > [id^="mount-"]:not(#mount-promociones-grid) > .promo-flyer-card > .flyer-cta-bar { grid-column: 2; }
+}
+@media (max-width: 380px) {
+  .main-container { padding: 12px; }
+  .brand-title { font-size: 1.1rem; }
+  .nav-btn .btn-text { font-size: 0.8rem; }
+  .price-grid, .bunker-pricing-grid, .flyer-includes-list { grid-template-columns: 1fr; }
+  .install-banner { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

@@ -5,14 +5,31 @@
  */
 
 const PROMO_FLYERS_DATA = {
+  muayThai: {
+    id: 'muayThai',
+    brand: 'Kallpa & Búnker Cross',
+    themeClass: 'muay-thai-theme',
+    category: 'MUAY THAI PARA MUJERES',
+    title: 'Muay Thai para mujeres',
+    image: 'assets/muay-thai-mujeres.png',
+    description: 'Una hora para enfocarte en ti. Anímate a practicar un deporte de contacto que puede ayudarte a controlar tus emociones. 😊',
+    priceOptions: [
+      { label: '8 CLASES', price: 'S/ 160', featured: false },
+      { label: '12 CLASES', price: 'S/ 250', featured: true, badge: 'PROMO' }
+    ],
+    schedule: ['Martes y jueves: 7:00 p. m. a 8:00 p. m.'],
+    note: 'Consulta por WhatsApp la sede, las vacantes y la vigencia de los paquetes.',
+    ctaText: 'Consultar clases',
+    ctaSubtext: 'Muay Thai para mujeres'
+  },
   bunkerNatacion: {
     id: 'bunkerNatacion',
-    brand: 'Bünker Cross',
+    brand: 'Búnker Cross',
     accentColor: '#ff5a1f',
     themeClass: 'bunker-flyer-theme',
     category: 'NATACIÓN PERSONALIZADA',
     title: 'CLASES DE NATACIÓN',
-    image: 'assets/flyer_bunker_natacion.png',
+    image: null,
     description: 'Entrenamiento individual 1 a 1 en Piscina Temperada El Fanning',
     priceOptions: [
       { label: '1 CLASE (1 HORA)', price: 'S/ 70', featured: false },
@@ -22,17 +39,17 @@ const PROMO_FLYERS_DATA = {
       'Sábados: 2:00 pm',
       'Domingos: 9:00 am'
     ],
-    ctaText: 'RESERVAR AHORA',
+    ctaText: 'CONSULTAR VACANTES',
     ctaSubtext: 'Atención inmediata por WhatsApp'
   },
   bunkerGymBox: {
     id: 'bunkerGymBox',
-    brand: 'Bünker Cross',
+    brand: 'Búnker Cross',
     accentColor: '#ff5a1f',
     themeClass: 'bunker-flyer-theme',
     category: 'MUSCULACIÓN (GYMBOX)',
     title: 'ENTRENAMIENTO PERSONALIZADO',
-    image: 'assets/flyer_bunker_gymbox.png',
+    image: null,
     description: 'Rutina de musculación y mejora física guiada por Coach en GymBox',
     priceOptions: [
       { label: '8 SESIONES', price: 'S/ 200', featured: false },
@@ -42,17 +59,17 @@ const PROMO_FLYERS_DATA = {
       'Lunes a Viernes: 9:00 am – 4:00 pm',
       'Sábados: 8:00 am, 9:00 am u 11:00 am'
     ],
-    ctaText: 'RESERVAR AHORA',
+    ctaText: 'CONSULTAR VACANTES',
     ctaSubtext: 'Atención inmediata por WhatsApp'
   },
   bunkerPaddleSurf: {
     id: 'bunkerPaddleSurf',
-    brand: 'Bünker Cross',
+    brand: 'Búnker Cross',
     accentColor: '#ff5a1f',
     themeClass: 'bunker-flyer-theme',
     category: 'PADDLE SURF',
     title: 'PADDLE SURF EXPERIENCIA',
-    image: 'assets/flyer_paddle_surf.png',
+    image: null,
     description: 'Aventura en el mar con equipo completo e instructor capacitado',
     priceOptions: [
       { label: '1 SESIÓN', price: 'S/ 110', featured: false },
@@ -64,17 +81,17 @@ const PROMO_FLYERS_DATA = {
       'Tabla + Chaleco',
       'Instructor dedicado'
     ],
-    ctaText: 'RESERVAR AHORA',
+    ctaText: 'CONSULTAR VACANTES',
     ctaSubtext: 'Consultar fechas y vacantes'
   },
   bunkerOpenBox: {
     id: 'bunkerOpenBox',
-    brand: 'Bünker Cross',
+    brand: 'Búnker Cross',
     accentColor: '#ff5a1f',
     themeClass: 'bunker-flyer-theme',
     category: 'GIMNASIO LIBRE',
     title: 'GIMNASIO LIBRE (USO DE INSTALACIONES)',
-    image: 'assets/flyer_openbox.png',
+    image: null,
     description: 'Uso libre de máquinas, instalaciones y equipamiento GymBox Búnker',
     priceOptions: [
       { label: 'MENSUALIDAD', price: 'S/ 70', featured: false },
@@ -83,12 +100,12 @@ const PROMO_FLYERS_DATA = {
     schedule: [
       'Lunes a Viernes: 9:00 am – 4:00 pm'
     ],
-    ctaText: 'RESERVAR AHORA',
+    ctaText: 'CONSULTAR VACANTES',
     ctaSubtext: 'Atención inmediata por WhatsApp'
   },
   bunkerAtletas: {
     id: 'bunkerAtletas',
-    brand: 'GYMBOX BÜNKER',
+    brand: 'GYMBOX BÚNKER',
     accentColor: '#ff5a1f',
     themeClass: 'bunker-flyer-theme',
     category: 'ATLETAS JUVENILES',
@@ -111,7 +128,7 @@ const PROMO_FLYERS_DATA = {
       'Strength & Technique',
       'Metcon (W.O.D)'
     ],
-    ctaText: 'RESERVAR AHORA',
+    ctaText: 'CONSULTAR VACANTES',
     ctaSubtext: 'Inscripciones abiertas por WhatsApp'
   },
   kallpaNatacion: {
@@ -121,7 +138,7 @@ const PROMO_FLYERS_DATA = {
     themeClass: 'kallpa-flyer-theme',
     category: 'KALLPA NATACIÓN',
     title: 'CLASES DE NATACIÓN',
-    image: 'assets/flyer_kallpa_natacion.jpg',
+    image: null,
     description: 'Formación técnica y entrenamiento personalizado de natación',
     priceOptions: [
       { label: '1 CLASE (1 HORA)', price: 'S/ 70', featured: false },
@@ -131,7 +148,7 @@ const PROMO_FLYERS_DATA = {
       'Sábados: 2:00 pm',
       'Domingos: 9:00 am'
     ],
-    ctaText: 'RESERVAR AHORA',
+    ctaText: 'CONSULTAR VACANTES',
     ctaSubtext: 'Atención inmediata por WhatsApp'
   },
   triatlon: {
@@ -157,7 +174,7 @@ const PROMO_FLYERS_DATA = {
       'Entrenador Certificado',
       'Plan de Entrenamiento a distancia',
       '3 días de entrenamiento grupal',
-      'Acceso a GymBox BÜNKER'
+      'Acceso a GymBox BÚNKER'
     ],
     ctaText: 'ÚNETE AL CLUB',
     ctaSubtext: 'Inscripciones abiertas por WhatsApp'
@@ -174,7 +191,7 @@ function renderPromoFlyer(data) {
 
   const imageHtml = data.image ? `
     <div class="image-viewer-wrapper">
-      <img src="${data.image}" alt="${data.title}" class="promo-image" id="flyer-img-${data.id}">
+      <img src="${data.image}" alt="${data.title}" class="promo-image" loading="lazy" decoding="async">
       <button class="zoom-trigger-btn" onclick="openLightbox('${data.image}', '${data.brand} - ${data.title}')">
         <i class="fa-solid fa-expand"></i> Ver afiche completo
       </button>
@@ -208,7 +225,7 @@ function renderPromoFlyer(data) {
   ` : '';
 
   return `
-    <div class="promo-flyer-card ${data.themeClass}" id="flyer-${data.id}">
+    <div class="promo-flyer-card ${data.themeClass}" data-flyer="${data.id}">
       ${imageHtml}
       <div class="flyer-body">
         <span class="flyer-brand-tag">${data.brand} • ${data.category}</span>
@@ -221,9 +238,10 @@ function renderPromoFlyer(data) {
 
         ${scheduleHtml}
         ${includesHtml}
+        ${data.note ? `<p class="flyer-subtitle">${data.note}</p>` : ''}
       </div>
 
-      <button class="flyer-cta-bar" onclick="openWhatsApp('955882306')">
+      <button class="flyer-cta-bar" data-reserve-flyer="${data.id}">
         <span class="flyer-cta-text">${data.ctaText}</span>
         <span class="flyer-cta-sub">${data.ctaSubtext} <i class="fa-solid fa-arrow-right"></i></span>
       </button>
@@ -236,6 +254,7 @@ function renderPromoFlyer(data) {
  */
 function mountFlyers() {
   const mounts = {
+    'mount-muay-thai': 'muayThai',
     'mount-bunker-natacion': 'bunkerNatacion',
     'mount-bunker-gymbox': 'bunkerGymBox',
     'mount-bunker-atletas': 'bunkerAtletas',
@@ -257,205 +276,180 @@ function mountFlyers() {
       .map(data => renderPromoFlyer(data))
       .join('');
   }
+  document.getElementById('catalog-count').textContent = `TODOS (${Object.keys(PROMO_FLYERS_DATA).length})`;
 }
 
+// Keep a separate draft for each program, including the user's edits.
 document.addEventListener('DOMContentLoaded', () => {
-  // Populate flyer mount containers
   mountFlyers();
-
-  // DOM Elements
-  const navBtns = document.querySelectorAll('.nav-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
+  const navBtns = [...document.querySelectorAll('.nav-btn')];
+  const panels = [...document.querySelectorAll('.tab-panel')];
   const msgInput = document.getElementById('custom-msg-input');
-
-  // Default selected plan per category
-  let activeTab = 'natacion';
-  let selectedPlan = '';
-
-  // Standard pre-filled message templates per window / tab
-  const messageTemplates = {
-    natacion: (plan) => {
-      const planDetail = plan ? ` Interés en el plan: [${plan}].` : '';
-      return `¡Hola! Me interesa la Promoción Especial de Natación Integral (3 Meses).${planDetail} Quisiera más información y reservar mi cupo.`;
-    },
-    bunker: (plan) => {
-      const planDetail = plan ? ` Interés en el plan: [${plan}].` : '';
-      return `¡Hola! Deseo información y reservar una membresía para Búnker Cross Gimnasio / Funcional en Jesús María.${planDetail}`;
-    },
-    kallpa: (plan) => {
-      const planDetail = plan ? ` Interés en: [${plan}].` : '';
-      return `¡Hola! Quisiera más información sobre las Clases Grupales de Natación (Piscina Temperada Colegio Fanning).${planDetail} Por favor brindar detalles de horarios y vacantes disponibles.`;
-    },
-    'natacion-pers': (plan) => {
-      const planDetail = plan ? ` Interés en el paquete: [${plan}].` : '';
-      return `¡Hola! Quisiera información y reservar mi horario para Natación Personalizada (Clases 1 a 1 en Piscina Fanning).${planDetail} Por favor brindar vacantes para agendar.`;
-    },
-    'gimnasio-pers': (plan) => {
-      const planDetail = plan ? ` Interés en: [${plan}].` : '';
-      return `¡Hola! Deseo información y agendar mi plan de Entrenamiento Personalizado de Musculación y Mejora Física en el GymBox BÜNKER CROSS.${planDetail}`;
-    },
-    'atletas-juveniles': (plan) => {
-      const planDetail = plan ? ` Interés en el plan: [${plan}].` : '';
-      return `¡Hola! Deseo información y reservar una vacante para el Elite Training Camp (Atletas Juveniles) en GymBox Bünker.${planDetail}`;
-    },
-    'paddle-openbox': (plan) => {
-      const planDetail = plan ? ` Interés en: [${plan}].` : '';
-      return `¡Hola! Deseo información sobre los servicios de Paddle Surf y Gimnasio Libre.${planDetail} Por favor brindar vacantes y detalles.`;
-    },
-    triatlon: (plan) => {
-      const planDetail = plan ? ` Interés en el plan: [${plan}].` : '';
-      return `¡Hola! Me interesa unirme al Club de Triatlón (Nadar + Ciclismo + Running).${planDetail} Quisiera información sobre inscripción, horarios y vacantes.`;
-    },
-    promociones: (plan) => {
-      const planDetail = plan ? ` Interés en: [${plan}].` : '';
-      return `¡Hola! Quisiera información y reservar la promoción: ${planDetail || '[Consultar Promociones]'}. Por favor brindar detalles.`;
-    },
-    contacto: () => {
-      return `¡Hola! Quisiera realizar una consulta general sobre las Clases de Natación y Gimnasio Búnker Cross en Jesús María.`;
-    }
+  const status = document.getElementById('plan-status');
+  const drafts = new Map();
+  let activeTab = '';
+  const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stateFor = key => {
+    if (!drafts.has(key)) drafts.set(key, { plan: '', message: '' });
+    return drafts.get(key);
   };
-
-  // Function to update pre-filled message
+  function makeMessage(plan) {
+    const panel = document.getElementById(`panel-${activeTab}`);
+    const subject = plan || panel.dataset.category;
+    return `¡Hola! Me interesa ${subject}. Quisiera consultar los horarios, la sede y las vacantes disponibles para inscribirme.`;
+  }
   function updateMessage() {
-    if (messageTemplates[activeTab]) {
-      msgInput.value = messageTemplates[activeTab](selectedPlan);
+    const state = stateFor(activeTab);
+    if (!state.message) state.message = makeMessage(state.plan);
+    msgInput.value = state.message;
+    status.textContent = state.plan ? `Plan elegido: ${state.plan}` : 'Elige un plan o consulta por el programa completo.';
+  }
+  navBtns.forEach((btn, index) => {
+    const key = btn.dataset.tab;
+    btn.id = `tab-${key}`;
+    btn.tabIndex = index ? -1 : 0;
+    const panel = document.getElementById(`panel-${key}`);
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', btn.id);
+    panel.tabIndex = 0;
+    btn.addEventListener('click', () => {
+      if (location.hash === `#${key}`) activate(key, true);
+      else location.hash = key;
+    });
+    btn.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % navBtns.length;
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + navBtns.length) % navBtns.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = navBtns.length - 1;
+      if (next === undefined) return;
+      event.preventDefault();
+      navBtns[next].focus();
+      navBtns[next].click();
+    });
+  });
+  function activate(key, scroll = false) {
+    if (!navBtns.some(btn => btn.dataset.tab === key)) key = 'natacion';
+    if (activeTab) stateFor(activeTab).message = msgInput.value;
+    activeTab = key;
+    navBtns.forEach(btn => {
+      const active = btn.dataset.tab === key;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-selected', String(active));
+      btn.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => {
+      const active = panel.id === `panel-${key}`;
+      panel.hidden = !active;
+      panel.classList.toggle('active', active);
+    });
+    updateMessage();
+    if (scroll && document.activeElement?.getAttribute('role') !== 'tab') {
+      document.getElementById(`panel-${key}`).scrollIntoView({ behavior: reducedMotion() ? 'instant' : 'smooth', block: 'start' });
     }
   }
-
-  // Tab switching handler
-  navBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetTab = btn.getAttribute('data-tab');
-      activeTab = targetTab;
-      selectedPlan = ''; // reset plan selection when switching tabs
-
-      // Update Nav Buttons
-      navBtns.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-
-      // Update Tab Panels
-      let activePanel = null;
-      tabPanels.forEach(panel => {
-        panel.classList.remove('active');
-        if (panel.id === `panel-${targetTab}`) {
-          panel.classList.add('active');
-          activePanel = panel;
-        }
-      });
-
-      // Update URL hash for SEO Deep Indexing
-      if (history.replaceState) {
-        history.replaceState(null, null, `#${targetTab}`);
-      } else {
-        location.hash = `#${targetTab}`;
-      }
-
-      // Clear card selections in all panels
-      document.querySelectorAll('.option-card').forEach(card => card.classList.remove('selected'));
-
-      // Update WhatsApp Message Textarea
-      updateMessage();
-
-      // Smooth scroll to the active panel so the user sees the content immediately
-      if (activePanel) {
-        setTimeout(() => {
-          activePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 50);
+  // A hash is compared as data, never interpolated into a CSS selector.
+  window.addEventListener('hashchange', () => {
+    const key = location.hash.slice(1);
+    if (navBtns.some(btn => btn.dataset.tab === key)) activate(key, true);
+    else if (!key) activate('natacion');
+  });
+  document.querySelectorAll('.option-card').forEach(card => {
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-pressed', 'false');
+    card.tabIndex = 0;
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        card.click();
       }
     });
   });
-
-  // Handle URL hash on initial page load (SEO Deep Links)
-  const initialHash = location.hash.replace('#', '');
-  if (initialHash) {
-    const targetBtn = document.querySelector(`.nav-btn[data-tab="${initialHash}"]`);
-    if (targetBtn) {
-      targetBtn.click();
-    }
-  }
-
-  // Option Card click handler via Event Delegation (handles static and dynamically rendered cards)
-  document.addEventListener('click', (e) => {
-    const card = e.target.closest('.option-card');
-    if (!card) return;
-
-    // Unselect siblings in current option container or panel
-    const currentContainer = card.closest('.flyer-price-options') || card.closest('.tab-panel');
-    if (currentContainer) {
-      currentContainer.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-    }
-
-    card.classList.add('selected');
-    selectedPlan = card.getAttribute('data-plan') || '';
+  function choosePlan(card) {
+    const panel = card.closest('.tab-panel');
+    panel.querySelectorAll('.option-card').forEach(item => {
+      item.classList.toggle('selected', item === card);
+      item.setAttribute('aria-pressed', String(item === card));
+    });
+    const state = stateFor(activeTab);
+    state.plan = card.dataset.plan;
+    state.message = makeMessage(state.plan);
     updateMessage();
-
-    // Soft scroll to reservation section
-    const resBox = document.querySelector('.reservation-box');
-    if (resBox) {
-      resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  document.addEventListener('click', event => {
+    const card = event.target.closest('.option-card');
+    if (card) choosePlan(card);
+    const cta = event.target.closest('[data-reserve-flyer]');
+    if (!cta) return;
+    const flyer = cta.closest('[data-flyer]');
+    const selected = flyer.querySelector('.option-card.selected');
+    const data = PROMO_FLYERS_DATA[cta.dataset.reserveFlyer];
+    // The clicked flyer's context takes precedence over any other catalog card.
+    const plan = selected?.dataset.plan || `${data.brand} - ${data.category}`;
+    const state = stateFor(activeTab);
+    if (state.plan !== plan) {
+      if (!selected) {
+        cta.closest('.tab-panel').querySelectorAll('.option-card').forEach(card => {
+          card.classList.remove('selected');
+          card.setAttribute('aria-pressed', 'false');
+        });
+      }
+      state.plan = plan;
+      state.message = makeMessage(plan);
+      updateMessage();
     }
+    openWhatsApp('955882306');
   });
-
-  // Initial Message Setup
-  updateMessage();
+  msgInput.addEventListener('input', () => { stateFor(activeTab).message = msgInput.value; });
+  document.querySelectorAll('img').forEach(img => {
+    img.decoding = 'async';
+    img.addEventListener('error', () => {
+      const viewer = img.closest('.image-viewer-wrapper');
+      if (viewer) viewer.hidden = true;
+    });
+  });
+  activate(location.hash.slice(1));
 });
 
-/**
- * Open WhatsApp with specified number & current textarea message
- * @param {string} phone 
- */
 function openWhatsApp(phone) {
-  const msgInput = document.getElementById('custom-msg-input');
-  const messageText = msgInput ? msgInput.value.trim() : '¡Hola! Quisiera más información.';
-  const encodedMsg = encodeURIComponent(messageText);
-  
-  // Format clean phone number
-  const cleanPhone = phone.replace(/\D/g, '');
-  const waUrl = `https://wa.me/51${cleanPhone}?text=${encodedMsg}`;
-  
-  window.open(waUrl, '_blank', 'noopener,noreferrer');
+  const input = document.getElementById('custom-msg-input');
+  const message = input?.value.trim() || '¡Hola! Quisiera más información sobre los programas de Kallpa & Búnker Cross.';
+  const digits = String(phone).replace(/\D/g, '');
+  const number = digits.length === 9 ? `51${digits}` : digits;
+  window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
 }
+function selectNumberAndReserve(phone) { openWhatsApp(phone); }
 
-/**
- * Helper to select a specific phone number and trigger WhatsApp
- * @param {string} phone 
- */
-function selectNumberAndReserve(phone) {
-  openWhatsApp(phone);
-}
-
-/**
- * Lightbox Modal Logic for Image Fullscreen Viewing
- */
+let lightboxOpener;
+let savedBodyOverflow = '';
 function openLightbox(imageSrc, captionText) {
   const modal = document.getElementById('lightbox-modal');
-  const img = document.getElementById('lightbox-img');
-  const caption = document.getElementById('lightbox-caption');
-
-  if (modal && img) {
-    img.src = imageSrc;
-    if (caption) caption.textContent = captionText || '';
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // prevent scrolling behind modal
-  }
+  const image = document.getElementById('lightbox-img');
+  lightboxOpener = document.activeElement;
+  savedBodyOverflow = document.body.style.overflow;
+  image.src = imageSrc;
+  image.alt = captionText || 'Afiche promocional';
+  document.getElementById('lightbox-caption').textContent = captionText || 'Afiche promocional';
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.querySelector('.app-viewport').inert = true;
+  document.body.style.overflow = 'hidden';
+  modal.querySelector('button').focus();
 }
-
 function closeLightbox() {
   const modal = document.getElementById('lightbox-modal');
-  if (modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
+  if (!modal.classList.contains('active')) return;
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.querySelector('.app-viewport').inert = false;
+  document.body.style.overflow = savedBodyOverflow;
+  lightboxOpener?.focus();
 }
-
-// Close lightbox on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeLightbox();
+document.addEventListener('keydown', event => {
+  if (!document.getElementById('lightbox-modal').classList.contains('active')) return;
+  if (event.key === 'Escape') closeLightbox();
+  if (event.key === 'Tab') {
+    event.preventDefault();
+    document.querySelector('.lightbox-close').focus();
   }
 });
-
