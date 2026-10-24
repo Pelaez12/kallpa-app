@@ -7,10 +7,11 @@
     "node": ">=22"
   },
   "scripts": {
+    "build": "node scripts/build-static.mjs",
     "start": "node --env-file-if-exists=.env server.mjs",
     "setup:push": "node scripts/setup-push.mjs",
     "notify": "node --env-file-if-exists=.env scripts/notify.mjs",
-    "test": "node --test tests/server.test.mjs",
+    "test": "node --test tests/server.test.mjs tests/deployment.test.mjs",
     "test:browser": "node tests/browser-check.mjs && node tests/pwa-check.mjs"
   },
   "dependencies": {

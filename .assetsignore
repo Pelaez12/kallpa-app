@@ -1,0 +1,21 @@
+# Cloudflare reads this file even when the dashboard deploys --assets .
+# Ignore everything; explicitly publish only the browser application.
+*
+!index.html
+!styles.css
+!app.js
+!pwa.js
+!sw.js
+!manifest.webmanifest
+!robots.txt
+!sitemap.xml
+!sitemap.html
+!google782eddfc18437c54.html
+!assets/
+!assets/*.png
+!assets/*.jpg
+!assets/*.jpeg
+!assets/*.webp
+!assets/*.svg
+!assets/icons/
+!assets/icons/*.png

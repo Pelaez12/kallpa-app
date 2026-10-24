@@ -1,5 +1,13 @@
 # Revisión de UX y PWA
 
+## Corrección del despliegue en Cloudflare
+
+El despliegue desde la raíz incluía dependencias instaladas durante el build.
+Se agrega `.assetsignore` con una lista de archivos públicos permitidos y
+`npm run build` para generar opcionalmente `dist/`. Se comprueba que no se
+publiquen `node_modules/workerd/bin/workerd`, claves, servidor ni pruebas, y que
+el paquete conserve todos los archivos del manifest y la consulta offline.
+
 ## Cambios
 
 - Muay Thai para mujeres: afiche proporcionado, 8 clases S/ 160 y 12 clases

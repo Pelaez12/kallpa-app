@@ -59,6 +59,33 @@ operativo muestre el aviso inmediatamente.
 
 ## Publicar
 
+### Cloudflare Workers: archivos públicos
+
+El despliegue existente usa la raíz del repositorio como directorio de assets.
+`.gitignore` excluye dependencias de Git, pero no determina qué publica Wrangler.
+Por eso se incluye `.assetsignore`: permite únicamente HTML, CSS, JavaScript de
+la web, el manifest y las imágenes. Excluye `node_modules`, configuración,
+servidor, pruebas, documentación y secretos, incluso al desplegar `--assets .`.
+
+Este archivo corrige el error `Asset too large` al intentar subir el ejecutable
+`node_modules/workerd/bin/workerd` instalado durante el build de Cloudflare.
+No se necesita cambiar el comando del dashboard para aplicar esta exclusión.
+
+También hay una salida dedicada para configuraciones que prefieran no publicar
+desde la raíz:
+
+```sh
+npm run build
+```
+
+Genera `dist/` con los archivos públicos de la PWA. En Cloudflare se puede usar
+`npm run build` como comando de build y `./dist` como directorio de assets del
+comando de despliegue existente. `dist/` no contiene dependencias ni el backend.
+
+Referencia: [exclusión de assets en Cloudflare](https://developers.cloudflare.com/workers/static-assets/binding/#ignoring-assets).
+
+### Servicio de notificaciones
+
 La PWA informativa puede publicarse como archivos estáticos. Para notificaciones
 push hay que desplegar **también** `server.mjs` en un hosting Node con HTTPS, o
 redirigir `/api/push/*` desde el dominio de la web a ese servicio.
